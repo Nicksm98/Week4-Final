@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search__bar {
+    border: 1px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    max-width: 375px;
+}
+
+.search__input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+}
+
+.search__btn {
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(245, 82, 82);
+}
+
+/* 
+
+NAVBAR
+
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #51ecf1;
+    color: #000;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav__logo--wrapper {
+    height: 100%;
+}
+
+.nav__logo {
+    max-width: 100%;
+}
+
+.nav__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav__icon--box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 24px;
+}
+
+.nav__icon {
+    height: 50px;
+    width: 50px;
+}
+
+/* 
+
+LANDING PAGE
+
+*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #51ecf1;
+    color: #000;
+}
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30%;
+    width: 100%;
+    background-color: #51ecf1;
+    color: #000;
+}
+
+.header__title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 16px;    
+}
+
+.header__subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    color: #000;
+}
+
+.front__btn {
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(245, 82, 82);
+    width: 25%;
+}
+
+.header__img--wrapper {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+}
+
+.header__img {
+    height: 100%;
+    width: 75%;
+    border: 1px solid #000;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px #51ecf1, 0 0 0 4px #000;
+}
+
+
+/* 
+
+STARTERS PAGE
+
+*/
+
+#starters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #51ecf1;
+    color: #000;
+}
+
+.starter__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+.starter__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 3);
+    width: calc(100% / 3);
+    padding: 8px;
+}
+
+.starters {
+    max-height: 250px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 8px;
+    background-color: rgb(56, 55, 54);
+}
+
+
+
+/* 
+
+CARDS.HTML OVERLAY
+
+*/
+
+.overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #51ecf1;
+    color: #000;
+    font-size: 1.2rem;
+    position: fixed;
+    width: 100%;
+    height: 240px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.overlay__logo--wrapper {
+    height: 100%;
+}
+
+.overlay__logo {
+    padding: 16px;
+    animation: moveUpDown 5s linear infinite;
+}
+
+.overlay__banner--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay__banner {
+    width: 100%;
+    height: 100%
+}
+
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    color: #000;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-47%);
+}
+
+.shop__btn {
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(245, 82, 82);
+    width: 50%;
+}

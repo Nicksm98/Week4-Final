@@ -19,6 +19,16 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .search__bar {
     border: 1px solid #000;
     border-radius: 20px;
@@ -43,6 +53,17 @@ a {
     border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(245, 82, 82);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 0 96px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
 }
 
 /* 
@@ -162,13 +183,11 @@ header {
 
 .header__img {
     height: 100%;
-    width: 75%;
     border: 1px solid #000;
     border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 0 0 2px #51ecf1, 0 0 0 4px #000;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.65);
 }
-
 
 /* 
 
@@ -195,25 +214,99 @@ STARTERS PAGE
     max-width: 1400px;
 }
 
-.starter__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100% / 3);
-    width: calc(100% / 3);
-    padding: 8px;
-}
 
-.starters {
+.starter__img {
     max-height: 250px;
     width: 100%;
     border: 1px solid #000;
     border-radius: 25px;
     padding: 8px;
     background-color: rgb(56, 55, 54);
+    transition: all 600ms ease;
 }
 
+.starter__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1250px;
+}
 
+.gen__starters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 3);
+    width: calc(100% / 3);
+    color: #000;
+    padding: 8px;
+}
+
+.starter__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    border-radius: 25px;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.65);
+}
+
+.starter__wrapper:hover .gen__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.starter__wrapper:hover .starter__img {
+    filter: blur(5px);
+}
+
+.gen__description {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 300ms, transform 450ms ease;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.starter__wrapper:hover .starter__bg {
+    opacity: 0.7;
+}
+
+.starter__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 300ms;
+    border-radius: 25px;
+}
+
+.region {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.gen {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+}
 
 /* 
 
@@ -221,18 +314,24 @@ CARDS.HTML OVERLAY
 
 */
 
-.overlay {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#card__shop {
     background-color: #51ecf1;
     color: #000;
-    font-size: 1.2rem;
-    position: fixed;
-    width: 100%;
-    height: 240px;
+}
+
+.overlay {
+    background-color: #51ecf1;
+    color: #000;
+    position: relative;
+    height: 300px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.overlay__content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .overlay__logo--wrapper {
@@ -245,16 +344,8 @@ CARDS.HTML OVERLAY
 }
 
 .overlay__banner--wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
-    width: 100%;
-}
-
-.overlay__banner {
-    width: 100%;
-    height: 100%
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
 }
 
 
@@ -281,8 +372,27 @@ CARDS.HTML OVERLAY
 }
 
 .shop__btn {
-    border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(245, 82, 82);
     width: 50%;
+}
+
+/* 
+
+CARD SHOP
+
+*/
+
+.page__bg {
+    height: 100vh;
+    background-color: #51ecf1;
+    color: #000;
+}
+
+.page__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
 }

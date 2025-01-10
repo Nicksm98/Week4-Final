@@ -1,5 +1,5 @@
-import configuration from './configure';
-import queryBuilder from './queryBuilder';
+import configuration from './configure.js';
+import queryBuilder from './queryBuilder.js';
 
 const configure = ({apiKey}) => {
     configuration.apiKey = apiKey;

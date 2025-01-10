@@ -1,5 +1,19 @@
+const pokemon = require('pokemontcgsdk')
+pokemon.configure({apiKey: 'ef585f42-ed7c-4307-a988-24acb5c1c95c'})
 import configuration from './configure.js';
 import api from './api.js';
+
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+
 
 const getOptions = () => {
     const options = {

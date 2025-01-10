@@ -1,7 +1,7 @@
-import axios from 'axios';
-import qs from 'qs';
+import axios from '/node_modules';
+import qs from '/node_modules';
 
-import configuration from './configure';
+import configuration from './configure.js';
 
 const getOptions = () => {
     const options = {

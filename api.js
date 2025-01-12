@@ -1,4 +1,4 @@
-const apiKey = 'c88be850'; 
+// filepath: /c:/Users/Nick/OneDrive/Desktop/Week4 FInal/api.js
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const searchType = document.getElementById('search-type');
@@ -21,21 +21,8 @@ searchForm.addEventListener('submit', async (e) => {
 });
 
 async function searchMovies(searchTerm, type) {
-    let url = `http://www.omdbapi.com/?apikey=${apiKey}`;
-
-    switch (type) {
-        case 'title':
-            url += `&s=${searchTerm}`;
-            break;
-        case 'year':
-            url += `&y=${searchTerm}&type=movie`;
-            break;
-        case 'id':
-            url += `&i=${searchTerm}`;
-            break;
-    }
-
-    const response = await fetch(url);
+    const page = 1; // You can handle pagination as needed
+    const response = await fetch(`/search?query=${encodeURIComponent(searchTerm)}&type=${type}&page=${page}`);
     const data = await response.json();
 
     if (data.Response === 'True') {
@@ -55,7 +42,7 @@ function displayResults(movies) {
             <p>IMDb ID: ${movie.imdbID}</p>
             <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450.png?text=No+Poster'}" alt="${movie.Title} Poster">
             <p>Year: ${movie.Year}</p>
-            `;
+        `;
         resultsContainer.appendChild(movieCard);
     });
 }

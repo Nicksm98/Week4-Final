@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchQuery = urlParams.get('q');
     
     if (searchQuery) {
-        // Use the searchQuery to fetch movie results
         searchMovies(searchQuery);
     }
 
@@ -80,4 +79,3 @@ function displayNoResults() {
 function displayError() {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = '<p>An error occurred while fetching results.</p>';
-}

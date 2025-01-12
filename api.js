@@ -20,7 +20,7 @@ searchForm.addEventListener('submit', async (e) => {
 });
 
 async function searchMovies(searchTerm, type) {
-    const page = 1; // You can handle pagination as needed
+    const page = 1;
     const response = await fetch(`/search?query=${encodeURIComponent(searchTerm)}&type=${type}&page=${page}`);
     const data = await response.json();
 

@@ -16,14 +16,11 @@
         <figure class="nav__logo--wrapper">
           <img class="nav__logo" src="assets/movie_logo.png" alt="" />
         </figure>
-        <div class="search__bar front">
-          <input
-            type="text"
-            id="search-input"
-            class="search__input"
-            placeholder="Search genre, IMDb ID, title, or year"
-          />
-          <button id="search-btn" class="search__btn front__btn">Search</button>
+        <div class="search__bar">
+          <form class="search__input" action="cards.html" method="GET">
+            <input class="search__box" type="search" name="q" placeholder="Search movies...">
+            <button class="search__btn" type="submit">Search</button>
+          </form>
         </div>
       </nav>
       <header>

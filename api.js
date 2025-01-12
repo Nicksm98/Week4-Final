@@ -47,18 +47,15 @@ async function searchMovies(searchTerm, type) {
 
 function displayResults(movies) {
     resultsContainer.innerHTML = '';
-
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
         movieCard.classList.add('movie-card');
-
         movieCard.innerHTML = `
             <h2>${movie.Title}</h2>
-            <p>Year: ${movie.Year}</p>
             <p>IMDb ID: ${movie.imdbID}</p>
             <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450.png?text=No+Poster'}" alt="${movie.Title} Poster">
-        `;
-
+            <p>Year: ${movie.Year}</p>
+            `;
         resultsContainer.appendChild(movieCard);
     });
 }

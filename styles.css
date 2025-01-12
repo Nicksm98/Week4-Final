@@ -37,15 +37,25 @@ button:active {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    max-width: 375px;
+    max-width: 300px;
+    height: 32px;
 }
 
 .search__input {
     height: 100%;
     width: 100%;
+    padding-left: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search__box {
+    height: 100%;
+    width: 100%;
     border: none;
     outline: none;
-    padding-left: 8px;
+    background-color: #fff;
+    font-size: 1.2rem;
 }
 
 .search__btn {
@@ -53,6 +63,10 @@ button:active {
     border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(245, 82, 82);
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -296,12 +310,6 @@ STARTERS PAGE
     border-radius: 25px;
 }
 
-.region {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
 .genre {
     font-size: 1.2rem;
     font-weight: 400;
@@ -314,71 +322,27 @@ CARDS.HTML OVERLAY
 
 */
 
-#movie__shop {
+#movie__list {
     background-color: #51ecf1;
     color: #000;
 }
 
 .overlay {
-    background-color: #51ecf1;
-    color: #000;
-    position: relative;
-    height: 120px;
-    width: 100%;
-}
-
-.overlay__content {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.overlay__logo--wrapper {
-    height: 100%;
-}
-
-.overlay__logo {
-    height: 100%;
-    max-width: 100%;
-    padding: 16px;
-    animation: moveUpDown 5s linear infinite;
-}
-
-.overlay__banner--wrapper {
-    height: 100%;
-    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
-}
-
-
-@keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.shop {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 30px;
-    width: 100%;
-    color: #000;
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-47%);
+    margin: 0 auto;
+    padding: 0 96px;
+    background-color: #000000;
+    color: #fff;
+    height: 100px
 }
 
-.shop__btn {
-    border-radius: 20px;
-    background-color: rgb(245, 82, 82);
-    width: 50%;
+.home__btn {
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
 }
-
 /* 
 
 Movies Page
@@ -386,7 +350,6 @@ Movies Page
 */
 
 .page__bg {
-    height: 100vh;
     background-color: #51ecf1;
     color: #000;
 }
@@ -394,8 +357,7 @@ Movies Page
 .page__info {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    align-items: center;
     background-color: bisque;
 }
 
@@ -414,15 +376,52 @@ Movies Page
 }
 
 .movie-card {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 20px;
-    width: 300px;
+    width: 200px;
+    height: 350px;
 }
 
-.movie-card img {
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.movie-poster {
     max-width: 100%;
-    height: auto;
+    max-height: 200px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#show-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 1.2rem;
+    width: 10%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
 }

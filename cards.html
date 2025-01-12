@@ -11,41 +11,19 @@
     ></script>
   </head>
   <body>
-    <section id="movie__shop">
+    <section id="movie__list">
       <div class="overlay">
-        <div class="overlay__content">
-          <figure class="overlay__logo--wrapper">
-            <img
-              class="overlay__logo"
-              src=""
-              alt=""
+        <a class="home__btn" href="index.html">Home</a>
+        <div class="search__bar">
+          <form class="search__input" action="cards.html" method="GET">
+            <input
+              class="search__box"
+              type="search"
+              name="q"
+              placeholder="Search movies..."
             />
-          </figure>
-          <figure class="overlay__banner--wrapper">
-            <img
-              class="overlay__banner"
-              src=""
-              alt=""
-            />
-          </figure>
-          <figure class="overlay__logo--wrapper">
-            <img
-              class="overlay__logo"
-              src=""
-              alt=""
-            />
-          </figure>
-        </div>
-        <div class="search__bar shop">
-          <input
-            type="text"
-            id="search-input"
-            class="search__input"
-            placeholder="Search by Genre, IMDb ID, Title, or Year"
-          />
-          <button id="search-btn" class="search__btn shop__btn">
-            Build Your Deck!
-          </button>
+            <button class="search__btn" type="submit">Search</button>
+          </form>
         </div>
       </div>
       <div class="container">
@@ -53,19 +31,33 @@
           <div class="page__bg">
             <div class="page__info">
               <div class="search__menu">
-                <h1>Search Results: </h1>
-                <select id="search-type">
+                <h1>Search Results:</h1>
+                <!-- <select id="search-type">
                     <option value="title">Title</option>
                     <option value="year">Year</option>
-                    <option value="id">IMDb ID</option>
-                </select>
-              </div>
+                </select> -->
+                <select id="sort-type">
+                    <option value="title">Title, A-Z</option>
+                    <option value="title">Title, Z-A</option>
+                    <option value="year-asc">Year, New-Old</option>
+                    <option value="year">Year, Old-New</option>
+                  </select>
+            </div>
               <div id="results"></div>
+              <button id="show-more" style="display: none;">Show More</button>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <footer>
+      <div class="footer__logo">
+        <img src="" alt="" />
+      </div>
+      <div class="footer__info">
+        <p>&copy; 2025 Movie Database </p>
+      </div>
+    </footer>
     <script type="module" src="cards.js"></script>
   </body>
 </html>

@@ -21,7 +21,7 @@ let allMovies = [];
 
 async function searchMovies(query, append = false) {
     const apiKey = 'c88be850';
-    const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(query)}&page=${page}`;
+    const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(query)}&page=${page}`;
     
     try {
         const response = await fetch(url);

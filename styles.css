@@ -373,6 +373,8 @@ Movies Page
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
 }
 
 .movie-card {
@@ -424,4 +426,127 @@ footer {
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .nav__logo {
+        max-width: 100%;
+    }
+
+    .nav__icons {
+        display: none;
+    }
+
+    .nav__icon--box {
+        padding-right: 12px;
+    }
+
+    .header__title {
+        font-size: 2.5rem;
+    }
+
+    .header__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .header__img {
+        max-height: 500px;
+        max-width: 800px;
+    }
+
+    .genre__img {
+        max-height: 200px;
+    }
+
+    .genre__container {
+        max-width: 100%;
+    }
+
+    .genre__description {
+        left: 50px;
+        width: 60%;
+    }
+
+    .movie-card {
+        width: 150px;
+        height: 300px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .movie-poster {
+        max-height: 150px;
+    }
+
+    #show-more {
+        width: 20%;
+    }
+        #results {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }   
+}
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 2rem;
+    }
+
+    .header__subtitle {
+        font-size: 1rem;
+    }
+
+    .header__img {
+        max-height: 400px;
+        max-width: 600px;
+    }
+
+    .genre__img {
+        max-height: 150px;
+    }
+
+    .genre__container {
+        max-width: 100%;
+    }
+
+    .genre__description {
+        width: 60%;
+    }
+
+    .overlay {
+        padding: 0 24px;
+    }
+
+    .search__bar {
+        max-width: 50%;
+    }
+
+    .movie-card {
+        width: 150px;
+        height: 300px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .movie-poster {
+        max-height: 150px;
+    }
+
+    #show-more {
+        width: 20%;
+    }
+
+    #results {
+        grid-template-columns: repeat(2, 1fr);
+    }   
 }

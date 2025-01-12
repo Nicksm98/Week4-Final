@@ -79,3 +79,4 @@ function displayNoResults() {
 function displayError() {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = '<p>An error occurred while fetching results.</p>';
+}

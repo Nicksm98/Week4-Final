@@ -1,4 +1,3 @@
-// filepath: /c:/Users/Nick/OneDrive/Desktop/Week4 FInal/api.js
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const searchType = document.getElementById('search-type');

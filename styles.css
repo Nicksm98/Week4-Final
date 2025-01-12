@@ -462,6 +462,10 @@ footer {
         max-width: 800px;
     }
 
+    .overlay {
+        padding: 0 24px;
+    }
+
     .genre__img {
         max-height: 200px;
     }
@@ -492,7 +496,7 @@ footer {
         width: 20%;
     }
         #results {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-columns: repeat(3, 1fr);
     }   
 }
 @media (max-width: 480px) {
